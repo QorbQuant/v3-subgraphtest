@@ -4,18 +4,18 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
-const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
-const USDC_WETH_03_POOL = '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8'
+const WETH_ADDRESS = '0xFC00000000000000000000000000000000000006'
+const USDC_WETH_03_POOL = '0x45A51ed99e94C2B3584386009C0Cccc5A7957A84'
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0x6b175474e89094c44da98b954eedeac495271d0f', // DAI
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
-  '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
-  '0x0000000000085d4780b73119b644ae5ecd22b376', // TUSD
-  '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599', // WBTC
+  '0xFc00000000000000000000000000000000000001', // FRAX
+  '0xEB466342C4d449BC9f53A865D5Cb90586f405215', // axlUSDC
+  '0xFC00000000000000000000000000000000000005', // sfrxETH
+  '0xEcc68d0451E20292406967Fe7C04280E5238Ac7D', // axlfrxETH
+  '0xFc00000000000000000000000000000000000002', // FXS -- now and above are fraxtal tokens, below is eth
   '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643', // cDAI
   '0x39aa39c021dfbae8fac545936693ac917d5e7563', // cUSDC
   '0x86fadb80d8d2cff3c3680819e4da99c10232ba0f', // EBASE
@@ -34,8 +34,8 @@ export const WHITELIST_TOKENS: string[] = [
 ]
 
 const STABLE_COINS: string[] = [
-  '0x6b175474e89094c44da98b954eedeac495271d0f',
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+  '0xEB466342C4d449BC9f53A865D5Cb90586f405215',
+  '0xFc00000000000000000000000000000000000001',
   '0xdac17f958d2ee523a2206206994597c13d831ec7',
   '0x0000000000085d4780b73119b644ae5ecd22b376',
   '0x956f47f50a910163d8bf957cf5846d573e7f87ca',
